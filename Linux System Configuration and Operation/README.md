@@ -92,3 +92,39 @@
 ## Testing Network Connectivity
 - ping
 - ip add
+
+### ping
+- `ping google.com` or any other site to check the network connection.
+- `ping 8.8.8.8` to check if there is not a problem with dns.
+
+### ip add
+- `ip add` will give you ip addresses on your local computer.
+
+### ip route
+- `ip route` to see the routing table.
+##
+<br>
+
+## Testing DNS
+- `ping`
+- `dig @server_ip[optional] host_ip`
+- `nslookup host_ip server_ip[optional]`
+- `host host_ip server_ip[optional]`
+- DNS will look in to `/etc/hosts` file first.
+- Restart the local server using `service dnsmasq restart`
+## 
+<br>
+
+## Locating Common Network config Files
+
+- `/etc/hosts`
+- `/etc/resolv.conf`
+- `/etc/nsswitch.conf`
+##
+<br>
+
+## Identifying Ubuntu and Debian network files
+
+- `/etc/network/interfaces` in older version of ubuntu
+- `/etc/netplan/*` in newer version of ubuntu. It will have yaml file. If you make changes in this file than `sudo netplan apply` to apply those changes.
+- `Network Manager` can be used in GUI. 1:02
