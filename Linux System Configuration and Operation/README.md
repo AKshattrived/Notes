@@ -102,6 +102,12 @@
 
 ### ip route
 - `ip route` to see the routing table.
+
+### curl ifconfig.me
+- `curl ifconfig.me` to see public ip address of your network.
+
+### hostname -I
+- `hostname -I` to get the configured ip address for your host. 
 ##
 <br>
 
