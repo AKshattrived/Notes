@@ -134,3 +134,19 @@
 - `/etc/network/interfaces` in older version of ubuntu
 - `/etc/netplan/*` in newer version of ubuntu. It will have yaml file. If you make changes in this file than `sudo netplan apply` to apply those changes.
 - `Network Manager` can be used in GUI. 1:02
+
+## NFS 
+
+- nfs server: `sudo apt install nfs-kernel-server`
+- nfs client: `sudo apt install nfs-common`
+
+- auto mount nfs : append `10.210.170.121:/mnt/Pool-1/Proxmox-shared/akshat /scratch/akshat nfs x-systemd.automount 0 0` to `/etc/fstab`
+- apply mount: `sudo mount -a`
+- `sudo systemctl status nfs-kernel-server`
+
+## SSH
+- ssh server: `sudo apt install ssh-server`
+- ssh client: `ssh user@ip -p <port>`. By default it's port 22 and it's optional to mention the port when connecting. If server is using port other than 22 then mention port number.
+- ssh port can be configured in `/etc/ssh/sshd_config`
+- `sudo systemctl status ssh`
+- `sudo systemctl enable --now ssh`
