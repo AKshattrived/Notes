@@ -135,6 +135,15 @@
 - `/etc/netplan/*` in newer version of ubuntu. It will have yaml file. If you make changes in this file than `sudo netplan apply` to apply those changes.
 - `Network Manager` can be used in GUI. 1:02
 
+## tcpdump
+
+- Monitor network packets on speific port
+- `tcpdump port <port>`
+
+## netcat
+
+- TBD
+
 ## NFS 
 
 - nfs server: `sudo apt install nfs-kernel-server`
@@ -150,3 +159,19 @@
 - ssh port can be configured in `/etc/ssh/sshd_config`
 - `sudo systemctl status ssh`
 - `sudo systemctl enable --now ssh`
+
+## FTP
+
+- ftp server: `sudo apt install vsftpd`
+- ftp client: 
+    - install client by `sudo apt install ftp`. 
+    - Connect to ftp server by`ftp ip`
+- ftp config file location `/etc/vsftpd.conf`
+- ftp default port 21.
+- sftp default port 22. (yes, sftp uses ssh)
+- `sudo systemctl status vsftpd`
+- `sudo sysetemctl enable vsftpd`
+- `sudo systemctl restart vsftpd`
+
+## Download and unzip (GitHub,etc.)
+- curl -L "url" | tar zx
